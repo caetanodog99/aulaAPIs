@@ -1,432 +1,509 @@
+using UnityEngine;
+
+[System.Serializable]
 public class Pokemon
 {
-    public Ability[] abilities { get; set; }
-    public int base_experience { get; set; }
-    public Cries cries { get; set; }
-    public Form[] forms { get; set; }
-    public Game_Indices[] game_indices { get; set; }
-    public int height { get; set; }
-    public object[] held_items { get; set; }
-    public int id { get; set; }
-    public bool is_default { get; set; }
-    public string location_area_encounters { get; set; }
-    public Move[] moves { get; set; }
-    public string name { get; set; }
-    public int order { get; set; }
-    public Past_Abilities[] past_abilities { get; set; }
-    public object[] past_types { get; set; }
-    public Species species { get; set; }
-    public Sprites sprites { get; set; }
-    public Stat[] stats { get; set; }
-    public Type[] types { get; set; }
-    public int weight { get; set; }
+    public Ability[] abilities;
+    public int base_experience;
+    public Cries cries;
+    public Form[] forms;
+    public Game_Indices[] game_indices;
+    public int height;
+    public Held_Items[] held_items;
+    public int id;
+    public bool is_default;
+    public string location_area_encounters;
+    public Move[] moves;
+    public string name;
+    public int order;
+    public Past_Abilities[] past_abilities;
+    public string[] past_types;
+    public Species species;
+    public Sprites sprites;
+    public Stat[] stats;
+    public Type[] types;
+    public int weight;
 }
 
+[System.Serializable]
 public class Cries
 {
-    public string latest { get; set; }
-    public string legacy { get; set; }
+    public string latest;
+    public string legacy;
 }
 
+[System.Serializable]
 public class Species
 {
-    public string name { get; set; }
-    public string url { get; set; }
+    public string name;
+    public string url;
 }
 
+[System.Serializable]
 public class Sprites
 {
-    public string back_default { get; set; }
-    public object back_female { get; set; }
-    public string back_shiny { get; set; }
-    public object back_shiny_female { get; set; }
-    public string front_default { get; set; }
-    public object front_female { get; set; }
-    public string front_shiny { get; set; }
-    public object front_shiny_female { get; set; }
-    public Other other { get; set; }
-    public Versions versions { get; set; }
+    public string back_default;
+    public string back_female;
+    public string back_shiny;
+    public string back_shiny_female;
+    public string front_default;
+    public string front_female;
+    public string front_shiny;
+    public string front_shiny_female;
+    public Other other;
+    public Versions versions;
 }
 
+[System.Serializable]
 public class Other
 {
-    public Dream_World dream_world { get; set; }
-    public Home home { get; set; }
-    public OfficialArtwork officialartwork { get; set; }
-    public Showdown showdown { get; set; }
+    public Dream_World dream_world;
+    public Home home;
+    public OfficialArtwork officialartwork;
+    public Showdown showdown;
 }
 
+[System.Serializable]
 public class Dream_World
 {
-    public string front_default { get; set; }
-    public object front_female { get; set; }
+    public string front_default;
+    public string front_female;
 }
 
+[System.Serializable]
 public class Home
 {
-    public string front_default { get; set; }
-    public object front_female { get; set; }
-    public string front_shiny { get; set; }
-    public object front_shiny_female { get; set; }
+    public string front_default;
+    public string front_female;
+    public string front_shiny;
+    public string front_shiny_female;
 }
 
+[System.Serializable]
 public class OfficialArtwork
 {
-    public string front_default { get; set; }
-    public string front_shiny { get; set; }
+    public string front_default;
+    public string front_shiny;
 }
 
+[System.Serializable]
 public class Showdown
 {
-    public string back_default { get; set; }
-    public object back_female { get; set; }
-    public string back_shiny { get; set; }
-    public object back_shiny_female { get; set; }
-    public string front_default { get; set; }
-    public object front_female { get; set; }
-    public string front_shiny { get; set; }
-    public object front_shiny_female { get; set; }
+    public string back_default;
+    public string back_female;
+    public string back_shiny;
+    public string back_shiny_female;
+    public string front_default;
+    public string front_female;
+    public string front_shiny;
+    public string front_shiny_female;
 }
 
+[System.Serializable]
 public class Versions
 {
-    public GenerationI generationi { get; set; }
-    public GenerationIi generationii { get; set; }
-    public GenerationIii generationiii { get; set; }
-    public GenerationIv generationiv { get; set; }
-    public GenerationV generationv { get; set; }
-    public GenerationVi generationvi { get; set; }
-    public GenerationVii generationvii { get; set; }
-    public GenerationViii generationviii { get; set; }
+    public GenerationI generationi;
+    public GenerationIi generationii;
+    public GenerationIii generationiii;
+    public GenerationIv generationiv;
+    public GenerationV generationv;
+    public GenerationVi generationvi;
+    public GenerationVii generationvii;
+    public GenerationViii generationviii;
 }
 
+[System.Serializable]
 public class GenerationI
 {
-    public RedBlue redblue { get; set; }
-    public Yellow yellow { get; set; }
+    public RedBlue redblue;
+    public Yellow yellow;
 }
 
+[System.Serializable]
 public class RedBlue
 {
-    public object back_default { get; set; }
-    public object back_gray { get; set; }
-    public object back_transparent { get; set; }
-    public object front_default { get; set; }
-    public object front_gray { get; set; }
-    public object front_transparent { get; set; }
+    public string back_default;
+    public string back_gray;
+    public string back_transparent;
+    public string front_default;
+    public string front_gray;
+    public string front_transparent;
 }
 
+[System.Serializable]
 public class Yellow
 {
-    public object back_default { get; set; }
-    public object back_gray { get; set; }
-    public object back_transparent { get; set; }
-    public object front_default { get; set; }
-    public object front_gray { get; set; }
-    public object front_transparent { get; set; }
+    public string back_default;
+    public string back_gray;
+    public string back_transparent;
+    public string front_default;
+    public string front_gray;
+    public string front_transparent;
 }
 
+[System.Serializable]
 public class GenerationIi
 {
-    public Crystal crystal { get; set; }
-    public Gold gold { get; set; }
-    public Silver silver { get; set; }
+    public Crystal crystal;
+    public Gold gold;
+    public Silver silver;
 }
 
+[System.Serializable]
 public class Crystal
 {
-    public object back_default { get; set; }
-    public object back_shiny { get; set; }
-    public object back_shiny_transparent { get; set; }
-    public object back_transparent { get; set; }
-    public object front_default { get; set; }
-    public object front_shiny { get; set; }
-    public object front_shiny_transparent { get; set; }
-    public object front_transparent { get; set; }
+    public string back_default;
+    public string back_shiny;
+    public string back_shiny_transparent;
+    public string back_transparent;
+    public string front_default;
+    public string front_shiny;
+    public string front_shiny_transparent;
+    public string front_transparent;
 }
 
+[System.Serializable]
 public class Gold
 {
-    public object back_default { get; set; }
-    public object back_shiny { get; set; }
-    public object front_default { get; set; }
-    public object front_shiny { get; set; }
-    public object front_transparent { get; set; }
+    public string back_default;
+    public string back_shiny;
+    public string front_default;
+    public string front_shiny;
+    public string front_transparent;
 }
 
+[System.Serializable]
 public class Silver
 {
-    public object back_default { get; set; }
-    public object back_shiny { get; set; }
-    public object front_default { get; set; }
-    public object front_shiny { get; set; }
-    public object front_transparent { get; set; }
+    public string back_default;
+    public string back_shiny;
+    public string front_default;
+    public string front_shiny;
+    public string front_transparent;
 }
 
+[System.Serializable]
 public class GenerationIii
 {
-    public Emerald emerald { get; set; }
-    public FireredLeafgreen fireredleafgreen { get; set; }
-    public RubySapphire rubysapphire { get; set; }
+    public Emerald emerald;
+    public FireredLeafgreen fireredleafgreen;
+    public RubySapphire rubysapphire;
 }
 
+[System.Serializable]
 public class Emerald
 {
-    public object front_default { get; set; }
-    public object front_shiny { get; set; }
+    public string front_default;
+    public string front_shiny;
 }
 
+[System.Serializable]
 public class FireredLeafgreen
 {
-    public object back_default { get; set; }
-    public object back_shiny { get; set; }
-    public object front_default { get; set; }
-    public object front_shiny { get; set; }
+    public string back_default;
+    public string back_shiny;
+    public string front_default;
+    public string front_shiny;
 }
 
+[System.Serializable]
 public class RubySapphire
 {
-    public object back_default { get; set; }
-    public object back_shiny { get; set; }
-    public object front_default { get; set; }
-    public object front_shiny { get; set; }
+    public string back_default;
+    public string back_shiny;
+    public string front_default;
+    public string front_shiny;
 }
 
+[System.Serializable]
 public class GenerationIv
 {
-    public DiamondPearl diamondpearl { get; set; }
-    public HeartgoldSoulsilver heartgoldsoulsilver { get; set; }
-    public Platinum platinum { get; set; }
+    public DiamondPearl diamondpearl;
+    public HeartgoldSoulsilver heartgoldsoulsilver;
+    public Platinum platinum;
 }
 
+[System.Serializable]
 public class DiamondPearl
 {
-    public object back_default { get; set; }
-    public object back_female { get; set; }
-    public object back_shiny { get; set; }
-    public object back_shiny_female { get; set; }
-    public object front_default { get; set; }
-    public object front_female { get; set; }
-    public object front_shiny { get; set; }
-    public object front_shiny_female { get; set; }
+    public string back_default;
+    public string back_female;
+    public string back_shiny;
+    public string back_shiny_female;
+    public string front_default;
+    public string front_female;
+    public string front_shiny;
+    public string front_shiny_female;
 }
 
+[System.Serializable]
 public class HeartgoldSoulsilver
 {
-    public object back_default { get; set; }
-    public object back_female { get; set; }
-    public object back_shiny { get; set; }
-    public object back_shiny_female { get; set; }
-    public object front_default { get; set; }
-    public object front_female { get; set; }
-    public object front_shiny { get; set; }
-    public object front_shiny_female { get; set; }
+    public string back_default;
+    public string back_female;
+    public string back_shiny;
+    public string back_shiny_female;
+    public string front_default;
+    public string front_female;
+    public string front_shiny;
+    public string front_shiny_female;
 }
 
+[System.Serializable]
 public class Platinum
 {
-    public object back_default { get; set; }
-    public object back_female { get; set; }
-    public object back_shiny { get; set; }
-    public object back_shiny_female { get; set; }
-    public object front_default { get; set; }
-    public object front_female { get; set; }
-    public object front_shiny { get; set; }
-    public object front_shiny_female { get; set; }
+    public string back_default;
+    public string back_female;
+    public string back_shiny;
+    public string back_shiny_female;
+    public string front_default;
+    public string front_female;
+    public string front_shiny;
+    public string front_shiny_female;
 }
 
+[System.Serializable]
 public class GenerationV
 {
-    public BlackWhite blackwhite { get; set; }
+    public BlackWhite blackwhite;
 }
 
+[System.Serializable]
 public class BlackWhite
 {
-    public Animated animated { get; set; }
-    public string back_default { get; set; }
-    public object back_female { get; set; }
-    public string back_shiny { get; set; }
-    public object back_shiny_female { get; set; }
-    public string front_default { get; set; }
-    public object front_female { get; set; }
-    public string front_shiny { get; set; }
-    public object front_shiny_female { get; set; }
+    public Animated animated;
+    public string back_default;
+    public string back_female;
+    public string back_shiny;
+    public string back_shiny_female;
+    public string front_default;
+    public string front_female;
+    public string front_shiny;
+    public string front_shiny_female;
 }
 
+[System.Serializable]
 public class Animated
 {
-    public string back_default { get; set; }
-    public object back_female { get; set; }
-    public string back_shiny { get; set; }
-    public object back_shiny_female { get; set; }
-    public string front_default { get; set; }
-    public object front_female { get; set; }
-    public string front_shiny { get; set; }
-    public object front_shiny_female { get; set; }
+    public string back_default;
+    public string back_female;
+    public string back_shiny;
+    public string back_shiny_female;
+    public string front_default;
+    public string front_female;
+    public string front_shiny;
+    public string front_shiny_female;
 }
 
+[System.Serializable]
 public class GenerationVi
 {
-    public OmegarubyAlphasapphire omegarubyalphasapphire { get; set; }
-    public XY xy { get; set; }
+    public OmegarubyAlphasapphire omegarubyalphasapphire;
+    public XY xy;
 }
 
+[System.Serializable]
 public class OmegarubyAlphasapphire
 {
-    public string front_default { get; set; }
-    public object front_female { get; set; }
-    public string front_shiny { get; set; }
-    public object front_shiny_female { get; set; }
+    public string front_default;
+    public string front_female;
+    public string front_shiny;
+    public string front_shiny_female;
 }
 
+[System.Serializable]
 public class XY
 {
-    public string front_default { get; set; }
-    public object front_female { get; set; }
-    public string front_shiny { get; set; }
-    public object front_shiny_female { get; set; }
+    public string front_default;
+    public string front_female;
+    public string front_shiny;
+    public string front_shiny_female;
 }
 
+[System.Serializable]
 public class GenerationVii
 {
-    public Icons icons { get; set; }
-    public UltraSunUltraMoon ultrasunultramoon { get; set; }
+    public Icons icons;
+    public UltraSunUltraMoon ultrasunultramoon;
 }
 
+[System.Serializable]
 public class Icons
 {
-    public string front_default { get; set; }
-    public object front_female { get; set; }
+    public string front_default;
+    public string front_female;
 }
 
+[System.Serializable]
 public class UltraSunUltraMoon
 {
-    public string front_default { get; set; }
-    public object front_female { get; set; }
-    public string front_shiny { get; set; }
-    public object front_shiny_female { get; set; }
+    public string front_default;
+    public string front_female;
+    public string front_shiny;
+    public string front_shiny_female;
 }
 
+[System.Serializable]
 public class GenerationViii
 {
-    public Icons1 icons { get; set; }
+    public Icons1 icons;
 }
 
+[System.Serializable]
 public class Icons1
 {
-    public string front_default { get; set; }
-    public object front_female { get; set; }
+    public string front_default;
+    public string front_female;
 }
 
+[System.Serializable]
 public class Ability
 {
-    public Ability1 ability { get; set; }
-    public bool is_hidden { get; set; }
-    public int slot { get; set; }
+    public Ability1 ability;
+    public bool is_hidden;
+    public int slot;
 }
 
+[System.Serializable]
 public class Ability1
 {
-    public string name { get; set; }
-    public string url { get; set; }
+    public string name;
+    public string url;
 }
 
+[System.Serializable]
 public class Form
 {
-    public string name { get; set; }
-    public string url { get; set; }
+    public string name;
+    public string url;
 }
 
+[System.Serializable]
 public class Game_Indices
 {
-    public int game_index { get; set; }
-    public Version version { get; set; }
+    public int game_index;
+    public Version version;
 }
 
+[System.Serializable]
 public class Version
 {
-    public string name { get; set; }
-    public string url { get; set; }
+    public string name;
+    public string url;
 }
 
+[System.Serializable]
+public class Held_Items
+{
+    public Item item;
+    public Version_Details[] version_details;
+}
+
+[System.Serializable]
+public class Item
+{
+    public string name;
+    public string url;
+}
+
+[System.Serializable]
+public class Version_Details
+{
+    public int rarity;
+    public Version1 version;
+}
+
+[System.Serializable]
+public class Version1
+{
+    public string name;
+    public string url;
+}
+
+[System.Serializable]
 public class Move
 {
-    public Move1 move { get; set; }
-    public Version_Group_Details[] version_group_details { get; set; }
+    public Move1 move;
+    public Version_Group_Details[] version_group_details;
 }
 
+[System.Serializable]
 public class Move1
 {
-    public string name { get; set; }
-    public string url { get; set; }
+    public string name;
+    public string url;
 }
 
+[System.Serializable]
 public class Version_Group_Details
 {
-    public int level_learned_at { get; set; }
-    public Move_Learn_Method move_learn_method { get; set; }
-    public int? order { get; set; }
-    public Version_Group version_group { get; set; }
+    public int level_learned_at;
+    public Move_Learn_Method move_learn_method;
+    public string order;
+    public Version_Group version_group;
 }
 
+[System.Serializable]
 public class Move_Learn_Method
 {
-    public string name { get; set; }
-    public string url { get; set; }
+    public string name;
+    public string url;
 }
 
+[System.Serializable]
 public class Version_Group
 {
-    public string name { get; set; }
-    public string url { get; set; }
+    public string name;
+    public string url;
 }
 
+[System.Serializable]
 public class Past_Abilities
 {
-    public Ability2[] abilities { get; set; }
-    public Generation generation { get; set; }
+    public Ability2[] abilities;
+    public Generation generation;
 }
 
+[System.Serializable]
 public class Generation
 {
-    public string name { get; set; }
-    public string url { get; set; }
+    public string name;
+    public string url;
 }
 
+[System.Serializable]
 public class Ability2
 {
-    public Ability3 ability { get; set; }
-    public bool is_hidden { get; set; }
-    public int slot { get; set; }
+    public string ability;
+    public bool is_hidden;
+    public int slot;
 }
 
-public class Ability3
-{
-    public string name { get; set; }
-    public string url { get; set; }
-}
-
+[System.Serializable]
 public class Stat
 {
-    public int base_stat { get; set; }
-    public int effort { get; set; }
-    public Stat1 stat { get; set; }
+    public int base_stat;
+    public int effort;
+    public Stat1 stat;
 }
 
+[System.Serializable]
 public class Stat1
 {
-    public string name { get; set; }
-    public string url { get; set; }
+    public string name;
+    public string url;
 }
 
+[System.Serializable]
 public class Type
 {
-    public int slot { get; set; }
-    public Type1 type { get; set; }
+    public int slot;
+    public Type1 type;
 }
 
+[System.Serializable]
 public class Type1
 {
-    public string name { get; set; }
-    public string url { get; set; }
+    public string name;
+    public string url;
 }

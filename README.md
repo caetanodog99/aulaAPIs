@@ -1,2 +1,1 @@
-# aulaAPIs
-só pra ligar com o pc
+Integrantes do Grupo: Caetano, Erick, Gabriel, João Miguel e Lorenzo
